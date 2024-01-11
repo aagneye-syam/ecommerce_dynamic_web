@@ -13,7 +13,7 @@ router.get('/', function(req, res, next) {
     {
       name:"Jcaket",
       category:"Jacket",
-      descrption:"LEVI’S 501 Jeans Collection",
+      descrption:"LEVIS 501 Jeans Collection",
       image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPIv53II1zhL5InjgNuTxHhjC9hurd0Ca1lZGz-1zIbU8_mjRznTr-0BPkTatNFF6IKYw&usqp=CAU"
     },
     {
@@ -29,7 +29,7 @@ router.get('/', function(req, res, next) {
       image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQF97JOLjcmTIDOJM3aUnihD2ww_Mg6CsBXdjOtadiw3djw8xElC6rALs78CWx2rRX-AaA&usqp=CAU",
     }
   ]
-  res.render('index', { title: 'Express' });
+  res.render('index', {products});
 });
 
 module.exports = router;
