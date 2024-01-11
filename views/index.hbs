@@ -1,70 +1,160 @@
-<!doctype html>
 <html lang="en">
 
-<head>
+  <head>
     <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
-        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
 
     <title>Hello, world!</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <header>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <a class="navbar-brand" href="#">Navbar</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Shopping Cart</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
 
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Link</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Dropdown
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="#">Action</a>
-                            <a class="dropdown-item" href="#">Another action</a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="#">Something else here</a>
-                        </div>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link disabled" href="#">Disabled</a>
-                    </li>
-                </ul>
-                <form class="form-inline my-2 my-lg-0">
-                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-                </form>
-            </div>
-        </nav>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Home
+                <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                Dropdown
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Something else here</a>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled" href="#">Disabled</a>
+            </li>
+          </ul>
+          <form class="form-inline my-2 my-lg-0">
+            <input
+              class="form-control mr-sm-2"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button
+              class="btn btn-outline-success my-2 my-sm-0"
+              type="submit"
+            >Search</button>
+          </form>
+        </div>
+      </nav>
     </header>
+
+    <section>
+      <div class="container mt-5">
+        <div class="row">
+          <div class="col-md-3">
+            <div class="card" style="width: 18rem;">
+              <img
+                class="card-img-top"
+                src="data:image/jpeg;base64,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"
+                alt="Card image cap"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on the
+                  card title and make up the bulk of the card's content.</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+              </div>
+            </div>
+          </div>
+            <div class="col-md-3">
+            <div class="card" style="width: 18rem;">
+              <img class="card-img-top" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPIv53II1zhL5InjgNuTxHhjC9hurd0Ca1lZGz-1zIbU8_mjRznTr-0BPkTatNFF6IKYw&usqp=CAU" alt="Card image cap" />
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on the
+                  card title and make up the bulk of the card's content.</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="card" style="width: 18rem;">
+              <img class="card-img-top" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVyhi4e2_7ixiiEao8M9HXoBrQv9KDCjGQsg&usqp=CAU" alt="Card image cap" />
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on the
+                  card title and make up the bulk of the card's content.</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+              </div>
+            </div>
+          </div>
+             <div class="col-md-3">
+            <div class="card" style="width: 18rem;">
+              <img class="card-img-top" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPIv53II1zhL5InjgNuTxHhjC9hurd0Ca1lZGz-1zIbU8_mjRznTr-0BPkTatNFF6IKYw&usqp=CAU" alt="Card image cap" />
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on the
+                  card title and make up the bulk of the card's content.</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
-        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
-        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-        crossorigin="anonymous"></script>
-</body>
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 
 </html>
