@@ -5,13 +5,13 @@ var router = express.Router();
 router.get('/', function(req, res, next) {
   let products=[
     {
-      name:"Levis Jacket",
-      category:"Jacket",
-      descrption:"Levi’s® Made & Crafted SS23 Collection Delivers a Contemporary Outlook",
-      image:""
+      name:"Levis Jeans",
+      category:"Jeans",
+      descrption:"Levis 501 jeans ",
+      image:"https://bestmediainfo.com/uploads/2023/03/1678162677.Levis-501R-featuring-Deepika-Padukone.jpg",
     },
     {
-      name:"Jcaket",
+      name:"Jacket",
       category:"Jacket",
       descrption:"LEVIS 501 Jeans Collection",
       image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPIv53II1zhL5InjgNuTxHhjC9hurd0Ca1lZGz-1zIbU8_mjRznTr-0BPkTatNFF6IKYw&usqp=CAU"
