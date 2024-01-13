@@ -1,22 +1,19 @@
-const mongoClient = require("mongodb").mongoClient;
+const mongoClient = require("mongodb").MongoClient;
 const state = {
   db: null,
 };
-
-//to access connection.js globally
-module.export.connect = function (done) {
+module.exports.connect = function (done) {
   const url = "mongodb://localhost:27017";
-  const dbname = "shoppping";
+  const dbname = "shopping";
 
   mongoClient.connect(url, (err, data) => {
-    if (err) return done(err)
-
+    if (err) return done(err);
     state.db = data.db(dbname);
   });
 
   done();
 };
 
-module.export.get = function () {
+module.exports.get = function () {
   return state.db;
 };
