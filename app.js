@@ -36,10 +36,8 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, "public")));
 app.use(fileUpload());
 db.connect((err) => {
-  if(err)
-  console.log("Error while connecting Database "+err);
-  else
-  console.log("Database connected to port 27017");
+  if (err) console.log("Error while connecting Database " + err);
+  else console.log("Database connected to port 27017");
 });
 
 app.use("/", userRouter);
