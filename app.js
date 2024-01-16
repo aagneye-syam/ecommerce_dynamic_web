@@ -15,19 +15,7 @@ var db = require("./config/connection");
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "hbs");
 
-app.engine(
-  "hbs",
-  hbs.engine({
-    extname: "hbs",
-    defaultLayout: "layout",
-    layoutsDir: __dirname + "/views/layouts/",
-    partialsDir: __dirname + "/views/partials/",
-    runtimeOptions: {
-      allowProtoPropertiesByDefault: true,
-      allowProtoMethodsByDefault: true,
-    },
-  })
-);
+app.engine("hbs",hbs.engine({extname: "hbs",defaultLayout: "layout",layoutsDir: __dirname + "/views/layouts/",partialsDir: __dirname + "/views/partials/",runtimeOptions: {allowProtoPropertiesByDefault: true,allowProtoMethodsByDefault: true,},}));
 
 app.use(logger("dev"));
 app.use(express.json());
@@ -35,10 +23,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, "public")));
 app.use(fileUpload());
-db.connect((err) => {
-  if (err) console.log("Error while connecting Database " + err);
-  else console.log("Database connected to port 27017");
-});
+db.connect();
 
 app.use("/", userRouter);
 app.use("/admin", adminRouter);
