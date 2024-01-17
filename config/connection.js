@@ -1,21 +1,14 @@
+const mongoose = require('mongoose');
+const connectDB = async () => {
+    try{
+        mongoose.set('strictQuery',false);
+        const conn = await mongoose.connect(process.env.MONGODB_URI);
+        console.log('Database connected : ${conn.connection.host}');
 
-const mongoClient=require('mongodb').MongoClient
-const state={
-    db:null
-} 
+    }catch(err){
+        console.log(err);
 
-
-
-module.exports.connect=function(done){
-    const url='mongodb://localhost:27017'
-    const dbname='shopping'
-    mongoClient.connect(url,(err,data)=>{
-        if(err) return done(err)
-        state.db=data.db(dbname)
-        done()
-    })
-    
+    }
 }
-module.exports.get=function(){
-    return state.db
-}
+
+module.exports = connectDB;
