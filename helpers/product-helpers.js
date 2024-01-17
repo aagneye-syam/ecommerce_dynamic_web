@@ -1,11 +1,10 @@
-var db=require('../config/connection')
-
+var connectDB=require('../config/connection')
 
 module.exports={
 
     addProduct:(product,callback)=>{
        
-        db.get().collection('product').insertOne(product).then((data)=>{
+        connectDB.get.collection('product').insertOne(product).then((data)=>{
             callback(data.ops[0]._id)
 
         })
